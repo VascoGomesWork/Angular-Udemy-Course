@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-10">
+        <!-- When listening to the output we need to have the definition bellow  -->
+        <app-shopping-list-edit></app-shopping-list-edit>
+        <router-outlet></router-outlet>
+        <hr>
+        <ul class="list-group">
+            <a class="list-group-item" 
+            style="cursor: pointer;" 
+            *ngFor="let ingredient of ingredientsArray; let i = index"
+            (click)="onEditItem(i)"> {{ ingredient.name }} => ({{ingredient.amount}})</a>
+        </ul>
+    </div>
+</div>

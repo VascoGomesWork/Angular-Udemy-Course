@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-recipe-list></app-recipe-list>
+    </div>
+
+    <div class="col-md-7">
+        <!-- Using property binding to bind the selected recipe that came from the recipe list to the recipe Input in recipe-details
+        component -->
+        <!--<app-recipe-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></app-recipe-detail>-->
+        <router-outlet></router-outlet>
+        <ng-template #infoText><p>Please select a Recipe!</p></ng-template>
+    </div>
+
+</div>
